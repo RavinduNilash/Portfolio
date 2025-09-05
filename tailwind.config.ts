@@ -42,6 +42,11 @@ const config: Config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        // Custom color palette
+        'primary-dark': '#222222',
+        'secondary-gray': '#7B7B7B',
+        'tertiary-light': '#F8F8F8',
+        'pure-white': '#FFFFFF',
       },
       borderRadius: {
         lg: "var(--radius)",

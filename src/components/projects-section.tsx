@@ -67,10 +67,10 @@ const projects = [
 ]
 
 const categoryColors = {
-  "Full Stack": "from-blue-500 to-blue-600",
-  "Web App": "from-green-500 to-emerald-600",
-  "Frontend": "from-purple-500 to-violet-600",
-  "CMS": "from-orange-500 to-amber-600"
+  "Full Stack": "from-primary-dark to-secondary-gray",
+  "Web App": "from-secondary-gray to-primary-dark",
+  "Frontend": "from-primary-dark to-secondary-gray",
+  "CMS": "from-secondary-gray to-primary-dark"
 }
 
 export function ProjectsSection() {
@@ -78,12 +78,12 @@ export function ProjectsSection() {
   const otherProjects = projects.filter(project => !project.featured)
 
   return (
-    <section id="projects" className="relative min-h-screen flex items-center overflow-hidden bg-white">
+    <section id="projects" className="relative min-h-screen flex items-center overflow-hidden bg-pure-white">
       {/* Elegant background elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#1F51FF]/5 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse" />
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-green-500/5 rounded-full mix-blend-multiply filter blur-3xl opacity-30" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-[#1F51FF]/3 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary-dark/5 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse" />
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-secondary-gray/5 rounded-full mix-blend-multiply filter blur-3xl opacity-30" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary-dark/3 to-transparent rounded-full blur-3xl" />
       </div>
 
       <div className="container-center section-padding relative z-10">
@@ -102,7 +102,7 @@ export function ProjectsSection() {
             viewport={{ once: true }}
             className="relative inline-block mb-6"
           >
-            <span className="relative z-10 inline-flex items-center px-6 py-3 text-[#1F51FF] font-semibold text-sm tracking-[0.2em] uppercase bg-[#1F51FF]/5 rounded-full border border-[#1F51FF]/20 backdrop-blur-sm">
+            <span className="relative z-10 inline-flex items-center px-6 py-3 text-primary-dark font-semibold text-sm tracking-[0.2em] uppercase bg-primary-dark/5 rounded-full border border-primary-dark/20 backdrop-blur-sm">
               <Rocket className="w-4 h-4 mr-3 animate-pulse" />
               Portfolio Showcase
             </span>
@@ -111,7 +111,7 @@ export function ProjectsSection() {
               whileInView={{ scale: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
-              className="absolute -inset-2 bg-gradient-to-r from-[#1F51FF]/10 to-transparent rounded-full blur-md -z-10"
+              className="absolute -inset-2 bg-gradient-to-r from-primary-dark/10 to-transparent rounded-full blur-md -z-10"
             />
           </motion.div>
 
@@ -120,7 +120,7 @@ export function ProjectsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary-dark"
           >
             Featured{" "}
             <motion.span 
@@ -128,7 +128,7 @@ export function ProjectsSection() {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
               viewport={{ once: true }}
-              className="relative text-[#1F51FF]"
+              className="relative text-secondary-gray"
             >
               Projects
               <motion.div
@@ -136,7 +136,7 @@ export function ProjectsSection() {
                 whileInView={{ scaleX: 1 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
                 viewport={{ once: true }}
-                className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#1F51FF] to-[#1F51FF]/50 rounded-full"
+                className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-dark to-secondary-gray rounded-full"
               />
             </motion.span>
           </motion.h2>
@@ -146,10 +146,10 @@ export function ProjectsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
-            className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light"
+            className="text-lg md:text-xl text-secondary-gray max-w-4xl mx-auto leading-relaxed font-light"
           >
             A showcase of my recent work, demonstrating{" "}
-            <span className="font-semibold text-gray-800">modern web development</span>{" "}
+            <span className="font-semibold text-primary-dark">modern web development</span>{" "}
             skills and innovative problem-solving approaches.
           </motion.p>
         </motion.div>
@@ -169,7 +169,7 @@ export function ProjectsSection() {
             viewport={{ once: true }}
             className="text-center mb-8"
           >
-            <span className="text-sm text-gray-500 font-medium tracking-[0.2em] uppercase">
+            <span className="text-sm text-secondary-gray font-medium tracking-[0.2em] uppercase">
               Spotlight Projects
             </span>
             <motion.div
@@ -177,7 +177,7 @@ export function ProjectsSection() {
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
               viewport={{ once: true }}
-              className="mx-auto mt-2 w-20 h-[2px] bg-[#1F51FF]/30 rounded-full"
+              className="mx-auto mt-2 w-20 h-[2px] bg-primary-dark/30 rounded-full"
             />
           </motion.div>
 
@@ -205,7 +205,7 @@ export function ProjectsSection() {
                       <span className={`px-3 py-1 bg-gradient-to-r ${categoryColors[project.category as keyof typeof categoryColors]} text-white rounded-full text-xs font-medium`}>
                         {project.category}
                       </span>
-                      <Star className="w-4 h-4 text-[#1F51FF] fill-current" />
+                      <Star className="w-4 h-4 text-primary-dark fill-current" />
                     </motion.div>
                     
                     <motion.h3
@@ -213,7 +213,7 @@ export function ProjectsSection() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.6, delay: 0.3 }}
                       viewport={{ once: true }}
-                      className="text-2xl md:text-3xl font-bold text-gray-900"
+                      className="text-2xl md:text-3xl font-bold text-primary-dark"
                     >
                       {project.title}
                     </motion.h3>
@@ -223,7 +223,7 @@ export function ProjectsSection() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.6, delay: 0.4 }}
                       viewport={{ once: true }}
-                      className="text-gray-600 text-lg leading-relaxed"
+                      className="text-secondary-gray text-lg leading-relaxed"
                     >
                       {project.description}
                     </motion.p>
@@ -244,7 +244,7 @@ export function ProjectsSection() {
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, delay: techIndex * 0.05 }}
                         viewport={{ once: true }}
-                        className="px-3 py-1.5 bg-gray-100/80 hover:bg-[#1F51FF]/10 text-gray-700 hover:text-[#1F51FF] rounded-lg text-sm font-medium transition-all duration-300 cursor-default"
+                        className="px-3 py-1.5 bg-tertiary-light/80 hover:bg-primary-dark/10 text-secondary-gray hover:text-primary-dark rounded-lg text-sm font-medium transition-all duration-300 cursor-default"
                       >
                         {tech}
                       </motion.span>
@@ -264,7 +264,7 @@ export function ProjectsSection() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05, y: -2 }}
                       whileTap={{ scale: 0.95 }}
-                      className="inline-flex items-center px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-medium transition-all duration-300 group shadow-lg hover:shadow-xl"
+                      className="inline-flex items-center px-6 py-3 bg-primary-dark hover:bg-secondary-gray text-white rounded-xl font-medium transition-all duration-300 group shadow-lg hover:shadow-xl"
                     >
                       <Github className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                       View Code
@@ -275,7 +275,7 @@ export function ProjectsSection() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05, y: -2 }}
                       whileTap={{ scale: 0.95 }}
-                      className="inline-flex items-center px-6 py-3 bg-[#1F51FF] hover:bg-[#0F3FFF] text-white rounded-xl font-medium transition-all duration-300 group shadow-lg hover:shadow-xl"
+                      className="inline-flex items-center px-6 py-3 bg-secondary-gray hover:bg-primary-dark text-white rounded-xl font-medium transition-all duration-300 group shadow-lg hover:shadow-xl"
                     >
                       <Globe className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                       Live Demo
@@ -292,10 +292,10 @@ export function ProjectsSection() {
                     viewport={{ once: true }}
                     className="group relative"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#1F51FF]/20 to-green-500/20 rounded-2xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300" />
-                    <div className="relative bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-gray-100/50 hover:border-[#1F51FF]/20 transition-all duration-300 shadow-lg hover:shadow-xl">
-                      <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center overflow-hidden">
-                        <div className="text-gray-500 flex flex-col items-center space-y-2">
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/20 to-secondary-gray/20 rounded-2xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300" />
+                    <div className="relative bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-tertiary-light/50 hover:border-primary-dark/20 transition-all duration-300 shadow-lg hover:shadow-xl">
+                      <div className="aspect-video bg-gradient-to-br from-tertiary-light to-secondary-gray/20 rounded-xl flex items-center justify-center overflow-hidden">
+                        <div className="text-secondary-gray flex flex-col items-center space-y-2">
                           <Code2 className="h-12 w-12" />
                           <span className="text-sm font-medium">Project Preview</span>
                         </div>
@@ -324,8 +324,8 @@ export function ProjectsSection() {
             className="text-center mb-12"
           >
             <div className="flex items-center justify-center mb-4">
-              <TrendingUp className="w-5 h-5 text-[#1F51FF] mr-3" />
-              <span className="text-sm text-gray-500 font-medium tracking-[0.2em] uppercase">
+              <TrendingUp className="w-5 h-5 text-primary-dark mr-3" />
+              <span className="text-sm text-secondary-gray font-medium tracking-[0.2em] uppercase">
                 Other Notable Work
               </span>
             </div>
@@ -334,7 +334,7 @@ export function ProjectsSection() {
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 0.5, delay: 0.7 }}
               viewport={{ once: true }}
-              className="mx-auto w-24 h-[2px] bg-[#1F51FF]/30 rounded-full"
+              className="mx-auto w-24 h-[2px] bg-primary-dark/30 rounded-full"
             />
           </motion.div>
           
@@ -352,21 +352,21 @@ export function ProjectsSection() {
                   stiffness: 200
                 }}
                 viewport={{ once: true }}
-                className="group relative bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-gray-100/50 hover:border-[#1F51FF]/20 transition-all duration-500 hover:shadow-xl hover:shadow-[#1F51FF]/5"
+                className="group relative bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-tertiary-light/50 hover:border-primary-dark/20 transition-all duration-500 hover:shadow-xl hover:shadow-primary-dark/5"
               >
                 {/* Category Badge */}
                 <div className="flex items-center justify-between mb-4">
                   <span className={`px-3 py-1 bg-gradient-to-r ${categoryColors[project.category as keyof typeof categoryColors]} text-white rounded-full text-xs font-medium`}>
                     {project.category}
                   </span>
-                  <Star className="w-4 h-4 text-gray-300 group-hover:text-[#1F51FF] transition-colors duration-300" />
+                  <Star className="w-4 h-4 text-tertiary-light group-hover:text-primary-dark transition-colors duration-300" />
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="text-xl font-semibold text-gray-900 group-hover:text-[#1F51FF] transition-colors duration-300">
+                  <h4 className="text-xl font-semibold text-primary-dark group-hover:text-secondary-gray transition-colors duration-300">
                     {project.title}
                   </h4>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-secondary-gray text-sm leading-relaxed">
                     {project.description}
                   </p>
                   
@@ -379,7 +379,7 @@ export function ProjectsSection() {
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, delay: techIndex * 0.05 }}
                         viewport={{ once: true }}
-                        className="px-2 py-1 bg-gray-100/80 hover:bg-[#1F51FF]/10 text-gray-700 hover:text-[#1F51FF] rounded text-xs font-medium transition-all duration-300 cursor-default"
+                        className="px-2 py-1 bg-tertiary-light/80 hover:bg-primary-dark/10 text-secondary-gray hover:text-primary-dark rounded text-xs font-medium transition-all duration-300 cursor-default"
                       >
                         {tech}
                       </motion.span>
@@ -393,7 +393,7 @@ export function ProjectsSection() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className="text-gray-600 hover:text-[#1F51FF] transition-colors duration-300"
+                      className="text-secondary-gray hover:text-primary-dark transition-colors duration-300"
                     >
                       <Github className="h-5 w-5" />
                     </motion.a>
@@ -403,7 +403,7 @@ export function ProjectsSection() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className="text-gray-600 hover:text-[#1F51FF] transition-colors duration-300"
+                      className="text-secondary-gray hover:text-primary-dark transition-colors duration-300"
                     >
                       <ExternalLink className="h-5 w-5" />
                     </motion.a>
@@ -414,7 +414,7 @@ export function ProjectsSection() {
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
-                  className="absolute inset-0 bg-gradient-to-br from-[#1F51FF]/5 to-transparent rounded-2xl pointer-events-none"
+                  className="absolute inset-0 bg-gradient-to-br from-primary-dark/5 to-transparent rounded-2xl pointer-events-none"
                 />
               </motion.div>
             ))}
@@ -437,8 +437,8 @@ export function ProjectsSection() {
             className="mb-6"
           >
             <div className="flex items-center justify-center mb-4">
-              <Sparkles className="w-5 h-5 text-[#1F51FF] mr-3" />
-              <span className="text-sm text-gray-500 font-medium tracking-[0.2em] uppercase">
+              <Sparkles className="w-5 h-5 text-primary-dark mr-3" />
+              <span className="text-sm text-secondary-gray font-medium tracking-[0.2em] uppercase">
                 Innovation Focus
               </span>
             </div>
@@ -447,7 +447,7 @@ export function ProjectsSection() {
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 0.5, delay: 0.9 }}
               viewport={{ once: true }}
-              className="mx-auto w-20 h-[2px] bg-[#1F51FF]/30 rounded-full"
+              className="mx-auto w-20 h-[2px] bg-primary-dark/30 rounded-full"
             />
           </motion.div>
 
@@ -456,12 +456,12 @@ export function ProjectsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
             viewport={{ once: true }}
-            className="text-gray-600 max-w-2xl mx-auto leading-relaxed"
+            className="text-secondary-gray max-w-2xl mx-auto leading-relaxed"
           >
             Each project represents a journey of learning and innovation. I focus on building{" "}
-            <span className="font-semibold text-[#1F51FF]">scalable solutions</span>,{" "}
-            <span className="font-semibold text-[#1F51FF]">user-centric design</span>, and{" "}
-            <span className="font-semibold text-[#1F51FF]">cutting-edge technologies</span> to create meaningful digital experiences.
+            <span className="font-semibold text-primary-dark">scalable solutions</span>,{" "}
+            <span className="font-semibold text-primary-dark">user-centric design</span>, and{" "}
+            <span className="font-semibold text-primary-dark">cutting-edge technologies</span> to create meaningful digital experiences.
           </motion.p>
         </motion.div>
       </div>

@@ -11,12 +11,12 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900">
+    <footer className="relative overflow-hidden bg-gradient-to-br from-primary-dark via-secondary-gray to-primary-dark">
       {/* Elegant background elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#1F51FF]/5 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full mix-blend-multiply filter blur-3xl opacity-20" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-[#1F51FF]/3 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-pure-white/5 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-tertiary-light/5 rounded-full mix-blend-multiply filter blur-3xl opacity-20" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-pure-white/3 to-transparent rounded-full blur-3xl" />
       </div>
 
       <div className="container-center relative z-10">
@@ -38,9 +38,9 @@ export function Footer() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-2xl md:text-3xl font-bold text-white"
+                className="text-2xl md:text-3xl font-bold text-pure-white"
               >
-                <span className="text-[#1F51FF]">Ravindu</span> Nilash
+                <span className="text-tertiary-light">Ravindu</span> Nilash
               </motion.h3>
               
               <motion.p
@@ -48,12 +48,12 @@ export function Footer() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="text-gray-300 leading-relaxed max-w-md"
+                className="text-tertiary-light leading-relaxed max-w-md"
               >
                 Software Engineer passionate about creating{" "}
-                <span className="text-[#1F51FF] font-semibold">innovative solutions</span>{" "}
+                <span className="text-pure-white font-semibold">innovative solutions</span>{" "}
                 and building amazing digital experiences with{" "}
-                <span className="text-[#1F51FF] font-semibold">cutting-edge technologies</span>.
+                <span className="text-pure-white font-semibold">cutting-edge technologies</span>.
               </motion.p>
             </div>
 
@@ -66,17 +66,17 @@ export function Footer() {
               className="space-y-4"
             >
               <div className="flex items-center space-x-3">
-                <Star className="w-4 h-4 text-[#1F51FF]" />
-                <span className="text-sm text-gray-400 font-medium tracking-[0.2em] uppercase">
+                <Star className="w-4 h-4 text-tertiary-light" />
+                <span className="text-sm text-tertiary-light/70 font-medium tracking-[0.2em] uppercase">
                   Follow My Journey
                 </span>
               </div>
               
               <div className="flex space-x-4">
                 {[
-                  { icon: Github, href: "https://github.com/RavinduNilash", label: "GitHub", color: "hover:bg-gray-700" },
-                  { icon: Linkedin, href: "https://linkedin.com/in/ravindunilash", label: "LinkedIn", color: "hover:bg-blue-600" },
-                  { icon: Mail, href: "mailto:ravindu@example.com", label: "Email", color: "hover:bg-[#1F51FF]" }
+                  { icon: Github, href: "https://github.com/RavinduNilash", label: "GitHub", color: "hover:bg-secondary-gray" },
+                  { icon: Linkedin, href: "https://linkedin.com/in/ravindunilash", label: "LinkedIn", color: "hover:bg-tertiary-light/20" },
+                  { icon: Mail, href: "mailto:ravindu@example.com", label: "Email", color: "hover:bg-secondary-gray" }
                 ].map(({ icon: Icon, href, label, color }, index) => (
                   <motion.a
                     key={label}
@@ -99,14 +99,14 @@ export function Footer() {
                     }}
                     whileTap={{ scale: 0.95 }}
                     viewport={{ once: true }}
-                    className={`group relative w-12 h-12 bg-white/10 backdrop-blur-sm ${color} rounded-xl flex items-center justify-center transition-all duration-300 border border-white/10 hover:border-[#1F51FF]/30`}
+                    className={`group relative w-12 h-12 bg-pure-white/10 backdrop-blur-sm ${color} rounded-xl flex items-center justify-center transition-all duration-300 border border-pure-white/10 hover:border-tertiary-light/30`}
                     aria-label={label}
                   >
-                    <Icon className="h-5 w-5 text-white group-hover:scale-110 transition-transform duration-300" />
+                    <Icon className="h-5 w-5 text-pure-white group-hover:scale-110 transition-transform duration-300" />
                     <motion.div
                       initial={{ opacity: 0 }}
                       whileHover={{ opacity: 1 }}
-                      className="absolute inset-0 bg-[#1F51FF]/10 rounded-xl"
+                      className="absolute inset-0 bg-tertiary-light/10 rounded-xl"
                     />
                   </motion.a>
                 ))}
@@ -123,8 +123,8 @@ export function Footer() {
             className="space-y-6"
           >
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-white flex items-center">
-                <Code2 className="w-4 h-4 mr-2 text-[#1F51FF]" />
+              <h4 className="text-lg font-semibold text-pure-white flex items-center">
+                <Code2 className="w-4 h-4 mr-2 text-tertiary-light" />
                 Navigation
               </h4>
               <motion.div
@@ -132,7 +132,7 @@ export function Footer() {
                 whileInView={{ width: "2rem" }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="h-[2px] bg-[#1F51FF]/30 rounded-full"
+                className="h-[2px] bg-tertiary-light/30 rounded-full"
               />
             </div>
             
@@ -153,12 +153,12 @@ export function Footer() {
                 >
                   <a
                     href={link.href}
-                    className="group flex items-center text-gray-400 hover:text-[#1F51FF] transition-all duration-300"
+                    className="group flex items-center text-tertiary-light/70 hover:text-tertiary-light transition-all duration-300"
                   >
                     <motion.span
                       whileHover={{ x: 4 }}
                       transition={{ type: "spring", stiffness: 400 }}
-                      className="w-1 h-1 bg-gray-600 group-hover:bg-[#1F51FF] rounded-full mr-3 transition-colors duration-300"
+                      className="w-1 h-1 bg-tertiary-light/50 group-hover:bg-tertiary-light rounded-full mr-3 transition-colors duration-300"
                     />
                     {link.name}
                   </a>
@@ -176,8 +176,8 @@ export function Footer() {
             className="space-y-6"
           >
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-white flex items-center">
-                <Mail className="w-4 h-4 mr-2 text-[#1F51FF]" />
+              <h4 className="text-lg font-semibold text-pure-white flex items-center">
+                <Mail className="w-4 h-4 mr-2 text-tertiary-light" />
                 Get In Touch
               </h4>
               <motion.div
@@ -185,7 +185,7 @@ export function Footer() {
                 whileInView={{ width: "2rem" }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }}
-                className="h-[2px] bg-[#1F51FF]/30 rounded-full"
+                className="h-[2px] bg-tertiary-light/30 rounded-full"
               />
             </div>
             
@@ -197,7 +197,7 @@ export function Footer() {
                 transition={{ duration: 0.4, delay: 0.4 }}
                 viewport={{ once: true }}
                 whileHover={{ x: 4 }}
-                className="group flex items-center text-gray-300 hover:text-[#1F51FF] transition-all duration-300"
+                className="group flex items-center text-tertiary-light/80 hover:text-tertiary-light transition-all duration-300"
               >
                 <Mail className="h-4 w-4 mr-3 group-hover:scale-110 transition-transform duration-300" />
                 ravindu@example.com
@@ -208,7 +208,7 @@ export function Footer() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.5 }}
                 viewport={{ once: true }}
-                className="text-gray-400 flex items-center"
+                className="text-tertiary-light/70 flex items-center"
               >
                 <span className="w-4 h-4 mr-3 flex items-center justify-center">📍</span>
                 San Francisco, CA
@@ -231,7 +231,7 @@ export function Footer() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
               viewport={{ once: true }}
-              className="flex items-center text-gray-400 text-sm"
+              className="flex items-center text-tertiary-light/70 text-sm"
             >
               <span>© {currentYear} Ravindu Nilash. Crafted with</span>
               <Heart className="h-4 w-4 mx-2 text-red-500 animate-pulse" fill="currentColor" />
@@ -253,14 +253,14 @@ export function Footer() {
                 boxShadow: "0 8px 25px rgba(31, 81, 255, 0.25)"
               }}
               whileTap={{ scale: 0.95 }}
-              className="group relative w-12 h-12 bg-[#1F51FF] hover:bg-[#0F3FFF] rounded-xl flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="group relative w-12 h-12 bg-secondary-gray hover:bg-tertiary-light/20 rounded-xl flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl"
               aria-label="Back to top"
             >
-              <ArrowUp className="h-5 w-5 text-white group-hover:-translate-y-1 transition-transform duration-300" />
+              <ArrowUp className="h-5 w-5 text-pure-white group-hover:-translate-y-1 transition-transform duration-300" />
               <motion.div
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
-                className="absolute inset-0 bg-gradient-to-r from-[#0F3FFF] to-[#1F51FF] rounded-xl"
+                className="absolute inset-0 bg-gradient-to-r from-secondary-gray to-tertiary-light/20 rounded-xl"
               />
             </motion.button>
           </div>
@@ -272,7 +272,7 @@ export function Footer() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           viewport={{ once: true }}
-          className="absolute bottom-8 left-8 w-2 h-2 bg-[#1F51FF]/60 rounded-full"
+          className="absolute bottom-8 left-8 w-2 h-2 bg-tertiary-light/60 rounded-full"
         />
         
         <motion.div
@@ -280,7 +280,7 @@ export function Footer() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 1.0 }}
           viewport={{ once: true }}
-          className="absolute top-16 right-16 w-1 h-12 bg-gradient-to-b from-[#1F51FF]/30 to-transparent rounded-full"
+          className="absolute top-16 right-16 w-1 h-12 bg-gradient-to-b from-tertiary-light/30 to-transparent rounded-full"
         />
       </div>
     </footer>

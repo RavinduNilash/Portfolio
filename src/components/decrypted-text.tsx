@@ -64,7 +64,7 @@ export function DecryptedText({ text, className = "", delay = 0, speed = 50 }: D
     >
       {displayText || (hasStarted ? "" : text)}
       {isDecrypting && (
-        <span className="absolute -right-1 top-0 w-0.5 h-full bg-[#1F51FF] animate-pulse" />
+        <span className="absolute -right-1 top-0 w-0.5 h-full bg-primary-dark animate-pulse" />
       )}
     </span>
   )

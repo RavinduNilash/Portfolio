@@ -4,48 +4,48 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
-    --primary: 235 100% 56%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 235 100% 56%;
-    --accent-foreground: 0 0% 100%;
+    --background: 0 0% 100%;  /* White #FFFFFF */
+    --foreground: 215 23% 13%; /* Primary #222222 */
+    --card: 0 0% 97%; /* Tertiary #F8F8F8 */
+    --card-foreground: 215 23% 13%; /* Primary #222222 */
+    --popover: 0 0% 100%; /* White #FFFFFF */
+    --popover-foreground: 215 23% 13%; /* Primary #222222 */
+    --primary: 215 23% 13%; /* Primary #222222 */
+    --primary-foreground: 0 0% 100%; /* White #FFFFFF */
+    --secondary: 0 0% 48%; /* Secondary #7B7B7B */
+    --secondary-foreground: 0 0% 100%; /* White #FFFFFF */
+    --muted: 0 0% 97%; /* Tertiary #F8F8F8 */
+    --muted-foreground: 0 0% 48%; /* Secondary #7B7B7B */
+    --accent: 215 23% 13%; /* Primary #222222 */
+    --accent-foreground: 0 0% 100%; /* White #FFFFFF */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 235 100% 56%;
+    --border: 0 0% 90%; /* Light border */
+    --input: 0 0% 97%; /* Tertiary #F8F8F8 */
+    --ring: 215 23% 13%; /* Primary #222222 */
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
-    --primary: 235 100% 56%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 235 100% 56%;
-    --accent-foreground: 0 0% 100%;
+    --background: 0 0% 100%;  /* White #FFFFFF */
+    --foreground: 215 23% 13%; /* Primary #222222 */
+    --card: 0 0% 97%; /* Tertiary #F8F8F8 */
+    --card-foreground: 215 23% 13%; /* Primary #222222 */
+    --popover: 0 0% 100%; /* White #FFFFFF */
+    --popover-foreground: 215 23% 13%; /* Primary #222222 */
+    --primary: 215 23% 13%; /* Primary #222222 */
+    --primary-foreground: 0 0% 100%; /* White #FFFFFF */
+    --secondary: 0 0% 48%; /* Secondary #7B7B7B */
+    --secondary-foreground: 0 0% 100%; /* White #FFFFFF */
+    --muted: 0 0% 97%; /* Tertiary #F8F8F8 */
+    --muted-foreground: 0 0% 48%; /* Secondary #7B7B7B */
+    --accent: 215 23% 13%; /* Primary #222222 */
+    --accent-foreground: 0 0% 100%; /* White #FFFFFF */
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 235 100% 56%;
+    --border: 0 0% 90%; /* Light border */
+    --input: 0 0% 97%; /* Tertiary #F8F8F8 */
+    --ring: 215 23% 13%; /* Primary #222222 */
   }
 }
 
@@ -55,31 +55,34 @@
   }
   
   body {
-    @apply bg-white text-black;
+    @apply bg-white text-[#222222];
     font-feature-settings: "rlig" 1, "calt" 1;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    /* Ensure body takes full height */
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
   }
 }
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-[#1F51FF] to-[#1F51FF] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#222222] to-[#7B7B7B] bg-clip-text text-transparent;
   }
   
   .glass-effect {
-    @apply bg-white/95 backdrop-blur-md border border-gray-200/20 shadow-sm;
+    @apply bg-white/95 backdrop-blur-md border border-[#F8F8F8]/50 shadow-sm;
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:shadow-[#1F51FF]/10 hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-[#222222]/10 hover:-translate-y-1;
   }
   
   .btn-primary {
-    @apply bg-[#1F51FF] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#1F51FF]/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-[#1F51FF]/20;
+    @apply bg-[#222222] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#7B7B7B] transition-all duration-300 hover:scale-105 shadow-lg shadow-[#222222]/20;
   }
   
   .btn-secondary {
-    @apply border-2 border-[#1F51FF] text-[#1F51FF] px-6 py-3 rounded-lg font-semibold hover:bg-[#1F51FF] hover:text-white transition-all duration-300 hover:scale-105;
+    @apply border-2 border-[#222222] text-[#222222] px-6 py-3 rounded-lg font-semibold hover:bg-[#222222] hover:text-white transition-all duration-300 hover:scale-105;
   }
   
   .section-padding {
@@ -91,23 +94,225 @@
   }
   
   .text-highlight {
-    @apply text-[#1F51FF];
+    @apply text-[#222222];
   }
   
   .bg-highlight {
-    @apply bg-[#1F51FF];
+    @apply bg-[#222222];
   }
   
   .border-highlight {
-    @apply border-[#1F51FF];
+    @apply border-[#222222];
+  }
+  
+  /* Hero image wrapper default height */
+  .hero-image-wrapper {
+    height: 700px;
+    max-height: 700px;
+  }
+  
+  /* Full screen height utilities for better browser compatibility */
+  .full-screen-height {
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height */
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+  
+  /* Fixed height for hero section on larger screens */
+  .hero-section-height {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+  
+  /* Fixed height for screens with minimal height (below 600px) */
+  @media (max-height: 600px) {
+    .hero-section-height {
+      height: 601px !important;
+      min-height: 601px !important;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+    
+    /* Ensure proper scrolling on iOS */
+    .hero-section-height {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  
+  /* Fixed height for screens > 980px */
+  @media (min-height: 980px) {
+    .hero-section-height {
+      height: 800px !important;
+      min-height: 800px !important;
+    }
   }
 }
 
 html {
   scroll-behavior: smooth;
+  /* Ensure full height for proper viewport handling */
+  height: 100%;
 }
 
 /* Remove any dark mode styles since we want pure white background */
 .dark {
   color-scheme: light;
+}
+
+/* Vertical writing mode for text */
+.writing-mode-vertical {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+}
+
+/* Hero section responsive padding for medium height screens (596px-909px) */
+@media (min-height: 596px) and (max-height: 909px) {
+  .hero-right-content {
+    padding-left: 4rem !important;
+  }
+  
+  .hero-image-wrapper {
+    margin-left: 3rem !important;
+  }
+}
+
+/* Fixed sizing for screens with minimal height (below 600px) - use 601px sizing */
+@media (max-height: 600px) {
+  .hero-right-content {
+    padding-left: 4rem !important;
+  }
+  
+  .hero-image-wrapper {
+    margin-left: 3rem !important;
+    height: 500px !important;
+    max-height: 500px !important;
+  }
+  
+  /* Ensure the main content container allows scrolling */
+  .hero-section-height .absolute.inset-0 {
+    position: relative !important;
+    height: auto !important;
+    min-height: 601px !important;
+  }
+  
+  /* Fix all text and element sizes to prevent shrinking */
+  .hero-section-height h1 {
+    font-size: 8rem !important;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-section-height h1 {
+      font-size: 9rem !important;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .hero-section-height h1 {
+      font-size: 12rem !important;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .hero-section-height h1 {
+      font-size: 14rem !important;
+    }
+  }
+  
+  /* Maintain grid layout for statistics */
+  .hero-section-height .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+    margin-bottom: 3rem !important;
+  }
+  
+  /* Keep button sizing consistent */
+  .hero-section-height button {
+    padding: 0.625rem 1.5rem !important;
+    font-size: 0.875rem !important;
+  }
+  
+  /* Maintain spacing between elements */
+  .hero-section-height .space-y-8 > * + * {
+    margin-top: 2rem !important;
+  }
+}
+
+/* Fine-tuned padding for specific height sub-ranges */
+@media (min-height: 596px) and (max-height: 650px) {
+  .hero-right-content {
+    padding-left: 6rem !important;
+  }
+  
+  .hero-image-wrapper {
+    margin-left: 4rem !important;
+  }
+}
+
+@media (min-height: 651px) and (max-height: 750px) {
+  .hero-right-content {
+    padding-left: 5rem !important;
+  }
+  
+  .hero-image-wrapper {
+    margin-left: 3.5rem !important;
+  }
+}
+
+@media (min-height: 751px) and (max-height: 850px) {
+  .hero-right-content {
+    padding-left: 4.5rem !important;
+  }
+  
+  .hero-image-wrapper {
+    margin-left: 3rem !important;
+  }
+}
+
+@media (min-height: 851px) and (max-height: 909px) {
+  .hero-right-content {
+    padding-left: 3.5rem !important;
+  }
+  
+  .hero-image-wrapper {
+    margin-left: 2.5rem !important;
+  }
+}
+
+/* Fixed height constraints for screens > 980px */
+@media (min-height: 980px) {
+  .hero-image-wrapper {
+    height: 600px !important;
+    max-height: 600px !important;
+    margin-left: 3rem !important;
+  }
+  
+  .hero-right-content {
+    padding-left: 4rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-image-wrapper {
+    display: none !important;
+  }
+  .hero-right-content {
+    position: static !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .container-center {
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
 }

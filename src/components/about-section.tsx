@@ -8,25 +8,25 @@ const highlights = [
     icon: Code,
     title: "Clean Architecture",
     description: "Crafting maintainable, scalable solutions with modern best practices",
-    gradient: "from-blue-500 to-purple-600"
+    gradient: "from-primary-dark to-secondary-gray"
   },
   {
     icon: Zap,
     title: "Performance First",
     description: "Optimizing every interaction for lightning-fast user experiences",
-    gradient: "from-yellow-500 to-orange-600"
+    gradient: "from-secondary-gray to-primary-dark"
   },
   {
     icon: Users,
     title: "Team Synergy",
     description: "Building bridges between design, development, and business goals",
-    gradient: "from-green-500 to-teal-600"
+    gradient: "from-primary-dark to-secondary-gray"
   },
   {
     icon: Lightbulb,
     title: "Innovation Mindset",
     description: "Turning complex challenges into elegant, user-centric solutions",
-    gradient: "from-purple-500 to-pink-600"
+    gradient: "from-secondary-gray to-primary-dark"
   }
 ]
 
@@ -39,12 +39,12 @@ const stats = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative min-h-screen flex items-center overflow-hidden bg-white">
+    <section id="about" className="relative min-h-screen flex items-center overflow-hidden bg-pure-white">
       {/* Elegant background elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#1F51FF]/5 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse" />
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-[#1F51FF]/8 rounded-full mix-blend-multiply filter blur-3xl opacity-30" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-[#1F51FF]/3 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary-dark/5 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse" />
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-secondary-gray/8 rounded-full mix-blend-multiply filter blur-3xl opacity-30" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary-dark/3 to-transparent rounded-full blur-3xl" />
       </div>
 
       <div className="container-center section-padding relative z-10">
@@ -63,7 +63,7 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="relative inline-block mb-6"
           >
-            <span className="relative z-10 inline-flex items-center px-6 py-3 text-[#1F51FF] font-semibold text-sm tracking-[0.2em] uppercase bg-[#1F51FF]/5 rounded-full border border-[#1F51FF]/20 backdrop-blur-sm">
+            <span className="relative z-10 inline-flex items-center px-6 py-3 text-primary-dark font-semibold text-sm tracking-[0.2em] uppercase bg-primary-dark/5 rounded-full border border-primary-dark/20 backdrop-blur-sm">
               <Sparkles className="w-4 h-4 mr-3 animate-pulse" />
               Get to know me
             </span>
@@ -72,7 +72,7 @@ export function AboutSection() {
               whileInView={{ scale: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
-              className="absolute -inset-2 bg-gradient-to-r from-[#1F51FF]/10 to-transparent rounded-full blur-md -z-10"
+              className="absolute -inset-2 bg-gradient-to-r from-primary-dark/10 to-transparent rounded-full blur-md -z-10"
             />
           </motion.div>
 
@@ -81,7 +81,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary-dark"
           >
             Crafting Digital{" "}
             <motion.span 
@@ -89,7 +89,7 @@ export function AboutSection() {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
               viewport={{ once: true }}
-              className="relative text-[#1F51FF]"
+              className="relative text-primary-dark"
             >
               Experiences
               <motion.div
@@ -97,7 +97,7 @@ export function AboutSection() {
                 whileInView={{ scaleX: 1 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
                 viewport={{ once: true }}
-                className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#1F51FF] to-[#1F51FF]/50 rounded-full"
+                className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-dark to-secondary-gray rounded-full"
               />
             </motion.span>
           </motion.h2>
@@ -107,10 +107,10 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
-            className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light"
+            className="text-lg md:text-xl text-secondary-gray max-w-4xl mx-auto leading-relaxed font-light"
           >
             I&apos;m a passionate software engineer who transforms ideas into{" "}
-            <span className="font-semibold text-gray-800">impactful digital solutions</span>.
+            <span className="font-semibold text-primary-dark">impactful digital solutions</span>.
             My journey is fueled by curiosity, innovation, and an unwavering commitment to excellence.
           </motion.p>
         </motion.div>
@@ -133,11 +133,11 @@ export function AboutSection() {
               viewport={{ once: true }}
               className="relative max-w-5xl mx-auto"
             >
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 font-light">
+              <p className="text-lg md:text-xl text-secondary-gray leading-relaxed mb-6 font-light">
                 With a strong foundation in{" "}
                 <motion.span 
                   whileHover={{ scale: 1.02 }}
-                  className="relative font-semibold text-gray-900 cursor-default"
+                  className="relative font-semibold text-primary-dark cursor-default"
                 >
                   modern web technologies
                   <motion.div
@@ -145,18 +145,18 @@ export function AboutSection() {
                     whileInView={{ scaleX: 1 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                     viewport={{ once: true }}
-                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#1F51FF]/30 rounded-full"
+                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary-dark/30 rounded-full"
                   />
                 </motion.span>{" "}
                 and a keen eye for user experience, I specialize in building responsive, accessible, 
                 and performant applications that exceed expectations.
               </p>
               
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed font-light">
+              <p className="text-lg md:text-xl text-secondary-gray leading-relaxed font-light">
                 My approach combines{" "}
                 <motion.span 
                   whileHover={{ scale: 1.02 }}
-                  className="relative font-semibold text-gray-900 cursor-default"
+                  className="relative font-semibold text-primary-dark cursor-default"
                 >
                   technical expertise
                   <motion.div
@@ -164,7 +164,7 @@ export function AboutSection() {
                     whileInView={{ scaleX: 1 }}
                     transition={{ duration: 0.5, delay: 1.0 }}
                     viewport={{ once: true }}
-                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#1F51FF]/30 rounded-full"
+                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary-dark/30 rounded-full"
                   />
                 </motion.span>{" "}
                 with creative problem-solving to deliver solutions that not only work flawlessly 
@@ -177,14 +177,14 @@ export function AboutSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
                 viewport={{ once: true }}
-                className="absolute -top-8 -left-8 w-16 h-16 bg-[#1F51FF]/10 rounded-2xl backdrop-blur-sm"
+                className="absolute -top-8 -left-8 w-16 h-16 bg-primary-dark/10 rounded-2xl backdrop-blur-sm"
               />
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 1.4 }}
                 viewport={{ once: true }}
-                className="absolute -bottom-8 -right-8 w-12 h-12 bg-gradient-to-br from-[#1F51FF]/20 to-[#1F51FF]/5 rounded-xl"
+                className="absolute -bottom-8 -right-8 w-12 h-12 bg-gradient-to-br from-secondary-gray/20 to-primary-dark/5 rounded-xl"
               />
             </motion.div>
 
@@ -204,13 +204,13 @@ export function AboutSection() {
                   whileHover={{ scale: 1.05, y: -3 }}
                   transition={{ duration: 0.3, delay: 0.1 * index }}
                   viewport={{ once: true }}
-                  className="group relative px-6 py-4 bg-gradient-to-r from-[#1F51FF]/10 to-[#1F51FF]/5 text-[#1F51FF] rounded-2xl text-base font-semibold border border-[#1F51FF]/20 hover:border-[#1F51FF]/40 transition-all duration-300 cursor-default hover:shadow-lg hover:shadow-[#1F51FF]/10"
+                  className="group relative px-6 py-4 bg-gradient-to-r from-primary-dark/10 to-secondary-gray/5 text-primary-dark rounded-2xl text-base font-semibold border border-primary-dark/20 hover:border-primary-dark/40 transition-all duration-300 cursor-default hover:shadow-lg hover:shadow-primary-dark/10"
                 >
                   {tag}
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
-                    className="absolute inset-0 bg-[#1F51FF]/5 rounded-2xl"
+                    className="absolute inset-0 bg-primary-dark/5 rounded-2xl"
                   />
                 </motion.span>
               ))}
@@ -231,7 +231,7 @@ export function AboutSection() {
                 viewport={{ once: true }}
                 className="text-center mb-8"
               >
-                <span className="text-sm text-gray-500 font-medium tracking-[0.2em] uppercase">
+                <span className="text-sm text-secondary-gray font-medium tracking-[0.2em] uppercase">
                   By the numbers
                 </span>
                 <motion.div
@@ -239,7 +239,7 @@ export function AboutSection() {
                   whileInView={{ scaleX: 1 }}
                   transition={{ duration: 0.5, delay: 0.9 }}
                   viewport={{ once: true }}
-                  className="mx-auto mt-2 w-16 h-[2px] bg-[#1F51FF]/30 rounded-full"
+                  className="mx-auto mt-2 w-16 h-[2px] bg-primary-dark/30 rounded-full"
                 />
               </motion.div>
 
@@ -252,16 +252,16 @@ export function AboutSection() {
                     whileHover={{ scale: 1.05, y: -5 }}
                     transition={{ duration: 0.5, delay: stat.delay }}
                     viewport={{ once: true }}
-                    className="group text-center relative p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-gray-100/50 hover:border-[#1F51FF]/20 hover:shadow-lg hover:shadow-[#1F51FF]/5 transition-all duration-300"
+                    className="group text-center relative p-6 bg-pure-white/50 backdrop-blur-sm rounded-2xl border border-tertiary-light/50 hover:border-primary-dark/20 hover:shadow-lg hover:shadow-primary-dark/5 transition-all duration-300"
                   >
                     <motion.div
                       whileHover={{ scale: 1.05 }}
                       className="relative"
                     >
-                      <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F51FF] mb-3 group-hover:text-[#0F3FFF] transition-colors duration-300">
+                      <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-dark mb-3 group-hover:text-secondary-gray transition-colors duration-300">
                         {stat.number}
                       </h3>
-                      <p className="text-sm md:text-base text-gray-600 font-medium uppercase tracking-wider">
+                      <p className="text-sm md:text-base text-secondary-gray font-medium uppercase tracking-wider">
                         {stat.label}
                       </p>
                       <motion.div
@@ -269,7 +269,7 @@ export function AboutSection() {
                         whileInView={{ scaleX: 1 }}
                         transition={{ duration: 0.5, delay: stat.delay + 0.2 }}
                         viewport={{ once: true }}
-                        className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-[3px] bg-gradient-to-r from-[#1F51FF]/40 to-[#1F51FF]/10 rounded-full"
+                        className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-[3px] bg-gradient-to-r from-primary-dark/40 to-secondary-gray/10 rounded-full"
                       />
                     </motion.div>
                     
@@ -277,7 +277,7 @@ export function AboutSection() {
                     <motion.div
                       initial={{ opacity: 0 }}
                       whileHover={{ opacity: 1 }}
-                      className="absolute inset-0 bg-gradient-to-br from-[#1F51FF]/5 to-transparent rounded-2xl pointer-events-none"
+                      className="absolute inset-0 bg-gradient-to-br from-primary-dark/5 to-transparent rounded-2xl pointer-events-none"
                     />
                   </motion.div>
                 ))}
@@ -307,7 +307,7 @@ export function AboutSection() {
                 stiffness: 200
               }}
               viewport={{ once: true }}
-              className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-100/50 hover:border-[#1F51FF]/20 transition-all duration-500 hover:shadow-xl hover:shadow-[#1F51FF]/5"
+              className="group relative bg-pure-white/80 backdrop-blur-sm p-8 rounded-2xl border border-tertiary-light/50 hover:border-primary-dark/20 transition-all duration-500 hover:shadow-xl hover:shadow-primary-dark/5"
             >
               {/* Icon with gradient background */}
               <motion.div
@@ -315,18 +315,18 @@ export function AboutSection() {
                 transition={{ duration: 0.3 }}
                 className={`relative w-14 h-14 bg-gradient-to-br ${highlight.gradient} rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-shadow duration-300`}
               >
-                <highlight.icon className="h-7 w-7 text-white" />
+                <highlight.icon className="h-7 w-7 text-pure-white" />
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
-                  className="absolute inset-0 bg-white/20 rounded-xl"
+                  className="absolute inset-0 bg-pure-white/20 rounded-xl"
                 />
               </motion.div>
               
-              <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-[#1F51FF] transition-colors duration-300">
+              <h3 className="text-xl font-bold mb-3 text-primary-dark group-hover:text-secondary-gray transition-colors duration-300">
                 {highlight.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+              <p className="text-secondary-gray leading-relaxed group-hover:text-primary-dark transition-colors duration-300">
                 {highlight.description}
               </p>
               
@@ -336,14 +336,14 @@ export function AboutSection() {
                 whileInView={{ scaleX: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                 viewport={{ once: true }}
-                className="absolute bottom-0 left-8 right-8 h-[2px] bg-gradient-to-r from-[#1F51FF]/30 to-transparent rounded-full"
+                className="absolute bottom-0 left-8 right-8 h-[2px] bg-gradient-to-r from-primary-dark/30 to-transparent rounded-full"
               />
               
               {/* Hover effect overlay */}
               <motion.div
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
-                className="absolute inset-0 bg-gradient-to-br from-[#1F51FF]/5 to-transparent rounded-2xl pointer-events-none"
+                className="absolute inset-0 bg-gradient-to-br from-primary-dark/5 to-transparent rounded-2xl pointer-events-none"
               />
             </motion.div>
           ))}
