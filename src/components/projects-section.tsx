@@ -19,7 +19,7 @@ const projects = [
       "/Ziyo/4.png"
     ],
     featured: true,
-    category: "Full Stack"
+    category: "Web App"
   },
   {
     title: "Aspire Badminton Webshowcase",
@@ -34,34 +34,34 @@ const projects = [
     category: "Web App"
   },
   {
-    title: "Weather Dashboard",
-    description: "A responsive weather dashboard that provides detailed weather information with beautiful visualizations and location-based forecasts.",
-    tech: ["React", "TypeScript", "OpenWeather API", "Chart.js", "Tailwind"],
-    github: "https://github.com/RavinduNilash/weather-dashboard",
-    demo: "https://weather-dashboard-demo.vercel.app",
-    images: ["/api/placeholder/600/400"],
+    title: "Septic-Cheetah Website",
+    description: "A professional business showcase website for a septic cleaning agent company, featuring service offerings, product catalog, contact information, and customer testimonials with modern responsive design.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Next.js"],
+    github: "https://github.com/RavinduNilash/septic-cheetah",
+    demo: "https://septiccheetah.com",
+    images: ["/SepticCheetah/1.png","/SepticCheetah/2.png","/SepticCheetah/3.png","/SepticCheetah/4.png","/SepticCheetah/5.png","/SepticCheetah/6.png",],
     featured: true,
-    category: "Frontend"
+    category: "Web App"
   },
   {
-    title: "Portfolio Website",
-    description: "A modern, responsive portfolio website built with Next.js, featuring dark mode, smooth animations, and optimized performance.",
-    tech: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
-    github: "https://github.com/RavinduNilash/portfolio",
-    demo: "https://ravindunilash.dev",
-    images: ["/api/placeholder/600/400"],
+    title: "Zion-Property Management System",
+    description: "A comprehensive property management platform featuring tenant management, lease tracking, maintenance requests, rent collection, and financial reporting for property owners and managers.",
+    tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+    github: "https://github.com/RavinduNilash/zion-property",
+    demo: "https://zion-website-beta.vercel.app/",
+    images: ["/Zion-Property/1.png","/Zion-Property/2.png","/Zion-Property/3.png","/Zion-Property/4.png","/Zion-Property/5.png"],
     featured: true,
-    category: "Frontend"
+    category: "Full Stack"
   },
   {
-    title: "Blog Platform",
-    description: "A modern blog platform with markdown support, comment system, and SEO optimization for content creators.",
-    tech: ["Next.js", "Contentful", "TypeScript", "Vercel"],
-    github: "https://github.com/RavinduNilash/blog-platform",
-    demo: "https://blog-demo.vercel.app",
-    images: ["/api/placeholder/600/400"],
-    featured: false,
-    category: "CMS"
+    title: "E23-Company Website",
+    description: "A professional corporate website for E23, a software building company, featuring company portfolio, service offerings, team showcase, client testimonials, and project highlights with modern design and user experience.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "React"],
+    github: "https://github.com/RavinduNilash/e23-company",
+    demo: "https://e23-edge.vercel.app",
+    images: ["/E23/1.png","/E23/2.png","/E23/3.png","/E23/4.png","/E23/5.png"],
+    featured: true,
+    category: "Web Site"
   },
   {
     title: "Expense Tracker",
@@ -79,7 +79,8 @@ const categoryColors = {
   "Full Stack": "from-primary-dark to-secondary-gray",
   "Web App": "from-secondary-gray to-primary-dark",
   "Frontend": "from-primary-dark to-secondary-gray",
-  "CMS": "from-secondary-gray to-primary-dark"
+  "CMS": "from-secondary-gray to-primary-dark",
+  "Web Site": "from-primary-dark to-secondary-gray"
 }
 
 // Project Carousel Component
@@ -283,9 +284,9 @@ export function ProjectsSection() {
             viewport={{ once: true }}
             className="text-lg md:text-xl text-secondary-gray max-w-4xl mx-auto leading-relaxed font-light"
           >
-            A showcase of my recent work, demonstrating{" "}
-            <span className="font-semibold text-primary-dark">modern web development</span>{" "}
-            skills and innovative problem-solving approaches.
+            My projects for my clients, delivering{" "}
+            <span className="font-semibold text-primary-dark">tailored solutions</span>{" "}
+            that meet their unique business needs and goals.
           </motion.p>
         </motion.div>
 
