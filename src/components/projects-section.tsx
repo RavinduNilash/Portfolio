@@ -40,7 +40,7 @@ const projects = [
     github: "https://github.com/RavinduNilash/weather-dashboard",
     demo: "https://weather-dashboard-demo.vercel.app",
     images: ["/api/placeholder/600/400"],
-    featured: false,
+    featured: true,
     category: "Frontend"
   },
   {
@@ -50,7 +50,7 @@ const projects = [
     github: "https://github.com/RavinduNilash/portfolio",
     demo: "https://ravindunilash.dev",
     images: ["/api/placeholder/600/400"],
-    featured: false,
+    featured: true,
     category: "Frontend"
   },
   {
