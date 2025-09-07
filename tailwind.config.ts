@@ -55,6 +55,11 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        serif: ["'Playfair Display'", "'Times New Roman'", "serif"],
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(ellipse at center, var(--tw-gradient-stops))',
+        'gradient-elegant': 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 40%, #1a1a1a 80%)',
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-in-out",

@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Code, Users, Zap, Sparkles, Lightbulb } from "lucide-react"
 
 const highlights = [
@@ -115,6 +116,46 @@ export function AboutSection() {
           </motion.p>
         </motion.div>
 
+        {/* Mobile-only Image Container - Only visible below 425px */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="block max-[425px]:block min-[426px]:hidden max-w-[280px] mx-auto mb-16"
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden border-2 border-primary-dark/10 shadow-xl"
+          >
+            <Image
+              src="/me1.png"
+              alt="Ravindu Nilash - Software Engineer"
+              fill
+              className="object-cover object-left-bottom"
+              style={{
+                filter: 'contrast(1.05) brightness(0.98) saturate(0.95)',
+              }}
+              priority
+            />
+            
+            {/* Gradient overlay for better text contrast */}
+            <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/20 via-transparent to-transparent" />
+            
+            {/* Decorative corner accent */}
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              viewport={{ once: true }}
+              className="absolute top-4 right-4 w-3 h-3 bg-green-500/60 rounded-full"
+            />
+          </motion.div>
+        </motion.div>
+
         {/* Main Content Section */}
         <div className="max-w-6xl mx-auto mb-20">
           {/* Enhanced Profile Content */}
@@ -133,11 +174,11 @@ export function AboutSection() {
               viewport={{ once: true }}
               className="relative max-w-5xl mx-auto"
             >
-              <p className="text-lg md:text-xl text-secondary-gray leading-relaxed mb-6 font-light">
+              <p className="text-lg md:text-xl text-primary-dark leading-relaxed mb-6 font-medium">
                 With a strong foundation in{" "}
-                <motion.span 
+                <motion.span
                   whileHover={{ scale: 1.02 }}
-                  className="relative font-semibold text-primary-dark cursor-default"
+                  className="relative font-bold text-primary-dark cursor-default"
                 >
                   modern web technologies
                   <motion.div
@@ -145,18 +186,23 @@ export function AboutSection() {
                     whileInView={{ scaleX: 1 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                     viewport={{ once: true }}
-                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary-dark/30 rounded-full"
+                    className="absolute bottom-0 left-0 right-0 h-[3px] bg-primary-dark rounded-full"
                   />
                 </motion.span>{" "}
-                and a keen eye for user experience, I specialize in building responsive, accessible, 
-                and performant applications that exceed expectations.
+                and a{" "}
+                <span className="font-bold text-primary-dark">keen eye for user experience</span>, I specialize in building{" "}
+                <span className="font-bold text-primary-dark">responsive</span>,{" "}
+                <span className="font-bold text-primary-dark">accessible</span>,
+                and{" "}
+                <span className="font-bold text-primary-dark">performant applications</span>{" "}
+                that exceed expectations.
               </p>
               
-              <p className="text-lg md:text-xl text-secondary-gray leading-relaxed font-light">
+              <p className="text-lg md:text-xl text-primary-dark leading-relaxed font-medium">
                 My approach combines{" "}
-                <motion.span 
+                <motion.span
                   whileHover={{ scale: 1.02 }}
-                  className="relative font-semibold text-primary-dark cursor-default"
+                  className="relative font-bold text-primary-dark cursor-default"
                 >
                   technical expertise
                   <motion.div
@@ -164,27 +210,31 @@ export function AboutSection() {
                     whileInView={{ scaleX: 1 }}
                     transition={{ duration: 0.5, delay: 1.0 }}
                     viewport={{ once: true }}
-                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary-dark/30 rounded-full"
+                    className="absolute bottom-0 left-0 right-0 h-[3px] bg-primary-dark rounded-full"
                   />
                 </motion.span>{" "}
-                with creative problem-solving to deliver solutions that not only work flawlessly 
-                but also inspire and delight users.
+                with{" "}
+                <span className="font-bold text-primary-dark">creative problem-solving</span>{" "}
+                to deliver solutions that not only{" "}
+                <span className="font-bold text-primary-dark">work flawlessly</span>{" "}
+                but also{" "}
+                <span className="font-bold text-primary-dark">inspire and delight users</span>.
               </p>
 
-              {/* Decorative elements */}
+              {/* Decorative elements - repositioned to avoid covering text */}
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
                 viewport={{ once: true }}
-                className="absolute -top-8 -left-8 w-16 h-16 bg-primary-dark/10 rounded-2xl backdrop-blur-sm"
+                className="absolute -top-16 -left-20 w-12 h-12 bg-primary-dark/8 rounded-2xl backdrop-blur-sm"
               />
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 1.4 }}
                 viewport={{ once: true }}
-                className="absolute -bottom-8 -right-8 w-12 h-12 bg-gradient-to-br from-secondary-gray/20 to-primary-dark/5 rounded-xl"
+                className="absolute -bottom-16 -right-20 w-10 h-10 bg-gradient-to-br from-secondary-gray/15 to-primary-dark/3 rounded-xl"
               />
             </motion.div>
 

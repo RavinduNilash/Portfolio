@@ -93,6 +93,22 @@
     @apply max-w-7xl mx-auto;
   }
   
+
+  
+  /* Legacy navbar styles - keeping for reference */
+  .navbar-simple {
+    height: 72px !important;
+    min-height: 72px !important;
+    max-height: 72px !important;
+    overflow: hidden !important;
+  }
+  
+  .navbar-simple > div {
+    height: 72px !important;
+    min-height: 72px !important;
+    max-height: 72px !important;
+  }
+  
   .text-highlight {
     @apply text-[#222222];
   }
@@ -109,6 +125,111 @@
   .hero-image-wrapper {
     height: 700px;
     max-height: 700px;
+    position: relative; /* Ensure positioned for fill images */
+    width: 100%;
+  }
+  
+  /* Hero right content positioning */
+  .hero-right-content {
+    left: min(40%, 600px) !important;
+  }
+  
+  /* Hero image default styles - moved after media queries to avoid conflicts */
+  .hero-image {
+    object-fit: contain !important;
+    object-position: bottom !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+  }
+  
+  /* Default height for hero image (applied to all screens unless overridden) */
+  @media (min-width: 768px) {
+    .hero-image {
+      height: 650px !important;
+      max-height: 650px !important;
+    }
+    
+    .hero-image-wrapper {
+      height: 650px !important;
+      max-height: 650px !important;
+    }
+  }
+  
+  /* Responsive positioning for different screen widths */
+  @media (min-width: 769px) and (max-width: 1096px) {
+    .hero-right-content {
+      left: 48% !important;
+    }
+  }
+  
+  /* Increased hero image height for 769px to 1023px range */
+  @media (min-width: 769px) and (max-width: 1096px) {
+    .hero-image-wrapper {
+      height: 1000px !important;
+      max-height: 1000px !important;
+      position: relative !important;
+      width: 100% !important;
+    }
+    
+    .hero-image {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+      object-position: bottom !important;
+    }
+    
+    .hero-right-content {
+      background-color: transparent !important; /* Remove debug color */
+    }
+  }
+  
+  @media (min-width: 1096px) and (max-width: 1218px) {
+    .hero-right-content {
+      left: 42% !important;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .hero-image {
+      height: 700px !important;
+      min-height: 700px !important;
+      max-height: 700px !important;
+    }
+  }
+  
+  /* Better centering for large screens - increase left margin */
+  @media (min-width: 1280px) {
+    .hero-right-content {
+      left: 42% !important; /* Increased for better centering on large screens */
+    }
+  }
+  
+  @media (min-width: 1440px) {
+    .hero-right-content {
+      left: 45% !important; /* Further increased for very wide screens */
+    }
+  }
+  
+  @media (min-width: 1600px) {
+    .hero-image {
+      height: 750px !important;
+      min-height: 750px !important;
+      max-height: 750px !important;
+    }
+    
+    .hero-right-content {
+      left: 48% !important; /* Even more margin for ultra-wide screens */
+    }
+  }
+  
+  /* Additional breakpoint for extra large screens */
+  @media (min-width: 1920px) {
+    .hero-right-content {
+      left: 50% !important; /* Better centering for very large displays */
+    }
   }
   
   /* Full screen height utilities for better browser compatibility */
@@ -118,43 +239,46 @@
     min-height: 100vh;
     min-height: 100dvh;
   }
-  
-  /* Fixed height for hero section on larger screens */
+}
+
+/* Responsive height for hero section based on screen height */
+.hero-section-height {
+  position: relative;
+  background-color: #ffffff; /* Ensure white background */
+}
+
+/* Fixed height for very small screens (below 600px height) */
+@media (max-height: 599px) {
+  .hero-section-height {
+    height: 700px;
+    min-height: 700px;
+  }
+}
+
+/* Full screen height for medium screen heights (600px to 1810px) */
+@media (min-height: 600px) and (max-height: 1010px) {
   .hero-section-height {
     height: 100vh;
     height: 100dvh;
     min-height: 100vh;
     min-height: 100dvh;
   }
-  
-  /* Fixed height for screens with minimal height (below 600px) */
-  @media (max-height: 600px) {
-    .hero-section-height {
-      height: 601px !important;
-      min-height: 601px !important;
-      overflow-y: auto;
-      scroll-behavior: smooth;
-    }
-    
-    /* Ensure proper scrolling on iOS */
-    .hero-section-height {
-      -webkit-overflow-scrolling: touch;
-    }
-  }
-  
-  /* Fixed height for screens > 980px */
-  @media (min-height: 980px) {
-    .hero-section-height {
-      height: 800px !important;
-      min-height: 800px !important;
-    }
+}
+
+/* Fixed height for very large screens (above 1810px height) */
+@media (min-height: 727px) {
+  .hero-section-height {
+    height: 760px;
+    min-height: 760px;
   }
 }
+  
+
 
 html {
   scroll-behavior: smooth;
   /* Ensure full height for proper viewport handling */
-  height: 100%;
+  height: 100%; 
 }
 
 /* Remove any dark mode styles since we want pure white background */
@@ -168,130 +292,28 @@ html {
   text-orientation: mixed;
 }
 
-/* Hero section responsive padding for medium height screens (596px-909px) */
-@media (min-height: 596px) and (max-height: 909px) {
-  .hero-right-content {
-    padding-left: 4rem !important;
-  }
-  
-  .hero-image-wrapper {
-    margin-left: 3rem !important;
-  }
+/* Custom utilities for elegant text styling */
+.bg-gradient-radial {
+  background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
 }
 
-/* Fixed sizing for screens with minimal height (below 600px) - use 601px sizing */
-@media (max-height: 600px) {
-  .hero-right-content {
-    padding-left: 4rem !important;
-  }
-  
-  .hero-image-wrapper {
-    margin-left: 3rem !important;
-    height: 500px !important;
-    max-height: 500px !important;
-  }
-  
-  /* Ensure the main content container allows scrolling */
-  .hero-section-height .absolute.inset-0 {
-    position: relative !important;
-    height: auto !important;
-    min-height: 601px !important;
-  }
-  
-  /* Fix all text and element sizes to prevent shrinking */
-  .hero-section-height h1 {
-    font-size: 8rem !important;
-  }
-  
-  @media (min-width: 768px) {
-    .hero-section-height h1 {
-      font-size: 9rem !important;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .hero-section-height h1 {
-      font-size: 12rem !important;
-    }
-  }
-  
-  @media (min-width: 1280px) {
-    .hero-section-height h1 {
-      font-size: 14rem !important;
-    }
-  }
-  
-  /* Maintain grid layout for statistics */
-  .hero-section-height .grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1.5rem !important;
-    margin-bottom: 3rem !important;
-  }
-  
-  /* Keep button sizing consistent */
-  .hero-section-height button {
-    padding: 0.625rem 1.5rem !important;
-    font-size: 0.875rem !important;
-  }
-  
-  /* Maintain spacing between elements */
-  .hero-section-height .space-y-8 > * + * {
-    margin-top: 2rem !important;
-  }
+.text-gradient-elegant {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 40%, #1a1a1a 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Fine-tuned padding for specific height sub-ranges */
-@media (min-height: 596px) and (max-height: 650px) {
-  .hero-right-content {
-    padding-left: 6rem !important;
-  }
-  
-  .hero-image-wrapper {
-    margin-left: 4rem !important;
-  }
+.text-shadow-elegant {
+  text-shadow: 0 0 30px rgba(26, 26, 26, 0.1);
 }
 
-@media (min-height: 651px) and (max-height: 750px) {
-  .hero-right-content {
-    padding-left: 5rem !important;
-  }
-  
-  .hero-image-wrapper {
-    margin-left: 3.5rem !important;
-  }
-}
+/* Enhanced serif font loading */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&display=swap');
 
-@media (min-height: 751px) and (max-height: 850px) {
-  .hero-right-content {
-    padding-left: 4.5rem !important;
-  }
-  
-  .hero-image-wrapper {
-    margin-left: 3rem !important;
-  }
-}
-
-@media (min-height: 851px) and (max-height: 909px) {
-  .hero-right-content {
-    padding-left: 3.5rem !important;
-  }
-  
-  .hero-image-wrapper {
-    margin-left: 2.5rem !important;
-  }
-}
-
-/* Fixed height constraints for screens > 980px */
-@media (min-height: 980px) {
-  .hero-image-wrapper {
-    height: 600px !important;
-    max-height: 600px !important;
-    margin-left: 3rem !important;
-  }
-  
-  .hero-right-content {
-    padding-left: 4rem !important;
-  }
+/* Custom animation easing */
+.ease-elegant {
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 @media (max-width: 768px) {
