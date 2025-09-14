@@ -4,76 +4,68 @@ import { motion } from "framer-motion"
 import { Calendar, MapPin, Briefcase, GraduationCap, Award, Star, Sparkles, TrendingUp } from "lucide-react"
 
 const experiences = [
+  
   {
-    title: "Senior Software Engineer",
-    company: "Tech Solutions Inc.",
-    location: "Remote",
-    period: "2024 - Present",
+    title: "Junior Software Engineer",
+   company: "Absterco pvt Ltd.",
+    location: "Piliyandala, Sri Lanka",
+    period: "2025",
     description: [
-      "Lead development of scalable web applications using React and Node.js",
-      "Mentored junior developers and conducted code reviews",
-      "Implemented CI/CD pipelines resulting in 40% faster deployment cycles",
-      "Collaborated with cross-functional teams to deliver high-quality products"
+      "Built scalable web applications serving 10,000+ daily active users",
+      "Implemented responsive UI components using React and TypeScript",
+      "Collaborated with cross-functional teams to deliver features on time",
+      "Fixed critical bugs and improved code quality through peer reviews"
     ],
-    tech: ["React", "Node.js", "AWS", "Docker", "PostgreSQL"],
-    current: true
-  },
-  {
+    tech: ["Next.js", "TypeScript", "Express.js", "MongoDB", "Stripe"],
+    current: false
+  },{
     title: "Full Stack Developer",
-    company: "Digital Innovations Ltd.",
-    location: "San Francisco, CA",
-    period: "2022 - 2024",
+   company: "Absterco pvt Ltd.",
+    location: "Piliyandala, Sri Lanka",
+    period: "2025",
     description: [
-      "Developed and maintained multiple client-facing web applications",
-      "Optimized application performance resulting in 60% faster load times",
-      "Integrated third-party APIs and payment gateways",
-      "Participated in agile development processes and sprint planning"
+      "Led development of enterprise-level applications using modern tech stack",
+      "Architected and implemented RESTful APIs handling 1M+ requests daily",
+      "Mentored junior developers and conducted code review sessions",
+      "Reduced system downtime by 40% through proactive monitoring solutions"
     ],
     tech: ["Next.js", "TypeScript", "Express.js", "MongoDB", "Stripe"],
     current: false
   },
   {
-    title: "Frontend Developer",
-    company: "StartupXYZ",
-    location: "New York, NY",
-    period: "2021 - 2022",
+    title: "Frontend Developer-Intern ",
+    company: "Absterco pvt Ltd.",
+    location: "Piliyandala, Sri Lanka",
+    period: "2024 ",
     description: [
-      "Built responsive web interfaces using React and modern CSS frameworks",
-      "Collaborated with designers to implement pixel-perfect UI/UX designs",
-      "Implemented state management solutions using Redux and Context API",
-      "Wrote comprehensive unit tests achieving 85% code coverage"
+      "Developed responsive user interfaces for 10+ client projects",
+      "Collaborated with design team to implement pixel-perfect mockups",
+      "Gained hands-on experience with modern JavaScript frameworks",
+      "Contributed to open-source projects and improved team workflows"
     ],
     tech: ["React", "Redux", "JavaScript", "Sass", "Jest"],
     current: false
   },
-  {
-    title: "Junior Developer",
-    company: "WebDev Agency",
-    location: "Los Angeles, CA",
-    period: "2020 - 2021",
-    description: [
-      "Assisted in developing client websites using HTML, CSS, and JavaScript",
-      "Learned modern development practices and version control with Git",
-      "Contributed to team projects and gained experience in collaborative development",
-      "Participated in client meetings and requirement gathering sessions"
-    ],
-    tech: ["HTML", "CSS", "JavaScript", "WordPress", "Git"],
-    current: false
-  }
+ 
 ]
 
 const education = [
   {
-    degree: "Bachelor of Science in Computer Science",
-    school: "University of Technology",
-    period: "2016 - 2020",
-    description: "Graduated with honors. Relevant coursework: Data Structures, Algorithms, Software Engineering, Database Systems, Web Development."
+    degree: "Bachelor of Science in Computing",
+    school: "University in Wrexham, Wales, UK",
+    period: "2024 - 2025",
+    description: "Currently pursuing advanced computing concepts with focus on software architecture, cloud technologies, and system design principles."
+  },{
+    degree: "Higher National Diploma in Information Technology",
+    school: "Institute of Technology University of Moratuwa",
+    period: "2021 - 2024",
+    description: "Specialized in web development and database management. Completed capstone project using React and Node.js with MongoDB integration."
   },
   {
     degree: "Full Stack Web Development Bootcamp",
     school: "Coding Academy",
     period: "2020",
-    description: "Intensive 12-week program covering modern web development technologies and best practices."
+    description: "Intensive hands-on training in modern JavaScript frameworks, RESTful APIs, and deployment strategies for production applications."
   }
 ]
 
