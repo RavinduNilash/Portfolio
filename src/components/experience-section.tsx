@@ -363,7 +363,7 @@ export function ExperienceSection() {
                   "AWS Certified Developer Associate",
                   "Google Analytics Certified",
                   "React Developer Certification",
-                  "Hackathon Winner - TechFest 2023"
+                  
                 ].map((cert, index) => (
                   <motion.div
                     key={cert}

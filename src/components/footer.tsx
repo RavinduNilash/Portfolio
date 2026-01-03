@@ -237,7 +237,7 @@ export function Footer() {
               <Heart className="h-4 w-4 mx-2 text-red-500 animate-pulse" fill="currentColor" />
               <span>and lots of</span>
               <Coffee className="h-4 w-4 mx-2 text-amber-500" />
-              <span>in San Francisco.</span>
+              <span>in Sri Lanka.</span>
             </motion.div>
 
             {/* Enhanced Back to Top Button */}
