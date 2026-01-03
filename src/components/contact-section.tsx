@@ -148,7 +148,7 @@ export function ContactSection() {
                       href="mailto:ravindu@example.com" 
                       className="text-secondary-gray hover:text-primary-dark transition-colors duration-300"
                     >
-                      ravindu@example.com
+                      rnilash2@gmail.com
                     </a>
                   </div>
                 </div>
@@ -175,7 +175,7 @@ export function ContactSection() {
                       href="tel:+1234567890" 
                       className="text-secondary-gray hover:text-primary-dark transition-colors duration-300"
                     >
-                      +1 (234) 567-8900
+                      +94 77 869 5283
                     </a>
                   </div>
                 </div>
@@ -198,7 +198,7 @@ export function ContactSection() {
                   </motion.div>
                   <div>
                     <p className="font-semibold text-primary-dark group-hover:text-primary-dark transition-colors duration-300">Location</p>
-                    <p className="text-secondary-gray">San Francisco, CA</p>
+                    <p className="text-secondary-gray">Colombo, Sri Lanka</p>
                   </div>
                 </div>
               </motion.div>

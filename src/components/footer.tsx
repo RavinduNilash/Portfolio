@@ -200,7 +200,7 @@ export function Footer() {
                 className="group flex items-center text-tertiary-light/80 hover:text-tertiary-light transition-all duration-300"
               >
                 <Mail className="h-4 w-4 mr-3 group-hover:scale-110 transition-transform duration-300" />
-                ravindu@example.com
+                rnilash2@gmail.com
               </motion.a>
               
               <motion.p
@@ -211,7 +211,7 @@ export function Footer() {
                 className="text-tertiary-light/70 flex items-center"
               >
                 <span className="w-4 h-4 mr-3 flex items-center justify-center">📍</span>
-                San Francisco, CA
+                Colombo, Sri Lanka
               </motion.p>
             </div>
           </motion.div>
