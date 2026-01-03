@@ -231,8 +231,8 @@ export function ContactSection() {
               <div className="flex justify-center space-x-4">
                 {[
                   { icon: Github, href: "https://github.com/RavinduNilash", label: "GitHub", color: "from-primary-dark to-secondary-gray" },
-                  { icon: Linkedin, href: "https://linkedin.com/in/ravindunilash", label: "LinkedIn", color: "from-secondary-gray to-primary-dark" },
-                  { icon: Twitter, href: "https://twitter.com/ravindunilash", label: "Twitter", color: "from-primary-dark to-secondary-gray" }
+                  { icon: Linkedin, href: "https://www.linkedin.com/in/ravindu-nilash-a29869270/", label: "LinkedIn", color: "from-secondary-gray to-primary-dark" },
+                  
                 ].map(({ icon: Icon, href, label, color }) => (
                   <motion.a
                     key={label}
