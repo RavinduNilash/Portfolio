@@ -48,7 +48,7 @@ const projects = [
     description: "A comprehensive property management platform featuring tenant management, lease tracking, maintenance requests, rent collection, and financial reporting for property owners and managers.",
     tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
     github: "https://github.com/RavinduNilash/zion-property",
-    demo: "https://zion-website-beta.vercel.app/",
+    demo: "https://www.zionhomestays.com/",
     images: ["/Zion-Property/1.png","/Zion-Property/2.png","/Zion-Property/3.png","/Zion-Property/4.png","/Zion-Property/5.png"],
     featured: true,
     category: "Full Stack"
@@ -58,7 +58,7 @@ const projects = [
     description: "A professional corporate website for E23, a software building company, featuring company portfolio, service offerings, team showcase, client testimonials, and project highlights with modern design and user experience.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "React"],
     github: "https://github.com/RavinduNilash/e23-company",
-    demo: "https://e23-edge.vercel.app",
+    demo: "https://www.e23edge.com/",
     images: ["/E23/1.png","/E23/2.png","/E23/3.png","/E23/4.png","/E23/5.png"],
     featured: true,
     category: "Web Site"
@@ -430,17 +430,7 @@ export function ProjectsSection() {
                     viewport={{ once: true }}
                     className="flex space-x-4"
                   >
-                    <motion.a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="inline-flex items-center px-6 py-3 bg-primary-dark hover:bg-secondary-gray text-white rounded-xl font-medium transition-all duration-300 group shadow-lg hover:shadow-xl"
-                    >
-                      <Github className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-                      View Code
-                    </motion.a>
+                    
                     <motion.a
                       href={project.demo}
                       target="_blank"

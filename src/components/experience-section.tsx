@@ -53,12 +53,12 @@ const education = [
   {
     degree: "Bachelor of Science in Computing",
     school: "University in Wrexham, Wales, UK",
-    period: "2024 - 2025",
+    period: "2025",
     description: "Currently pursuing advanced computing concepts with focus on software architecture, cloud technologies, and system design principles."
   },{
     degree: "Higher National Diploma in Information Technology",
     school: "Institute of Technology University of Moratuwa",
-    period: "2021 - 2024",
+    period: "2022 - 2024",
     description: "Specialized in web development and database management. Completed capstone project using React and Node.js with MongoDB integration."
   },
   {
