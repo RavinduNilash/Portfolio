@@ -178,15 +178,15 @@ export function AboutSection() {
                 With a strong foundation in{" "}
                 <motion.span
                   whileHover={{ scale: 1.02 }}
-                  className="relative font-bold text-primary-dark cursor-default"
+                  className="relative font-bold text-primary-dark cursor-default inline-block"
                 >
                   modern web technologies
-                  <motion.div
+                  <motion.span
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                     viewport={{ once: true }}
-                    className="absolute bottom-0 left-0 right-0 h-[3px] bg-primary-dark rounded-full"
+                    className="absolute bottom-0 left-0 right-0 h-[3px] bg-primary-dark rounded-full block"
                   />
                 </motion.span>{" "}
                 and a{" "}

@@ -181,7 +181,7 @@ export function ExperienceSection() {
             <div className="space-y-8">
               {experiences.map((exp, index) => (
                 <motion.div
-                  key={exp.company}
+                  key={`${exp.company}-${exp.title}-${index}`}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
