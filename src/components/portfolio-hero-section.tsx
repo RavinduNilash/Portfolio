@@ -163,15 +163,15 @@ export function PortfolioHeroSection() {
                   transition={{ duration: 0.6, delay: 3.0 }}
                   className="flex flex-col sm:flex-row gap-3 pt-4"
                 >
-                  <button className="bg-primary-dark text-pure-white px-6 py-2.5 rounded-full hover:bg-secondary-gray transition-all duration-300 font-normal text-sm flex items-center justify-center space-x-2 group">
+                  <a href="#contact" className="bg-primary-dark text-pure-white px-6 py-2.5 rounded-full hover:bg-secondary-gray transition-all duration-300 font-normal text-sm flex items-center justify-center space-x-2 group">
                     <span>Let&apos;s Work Together</span>
                     <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </button>
-                  <button className="border border-primary-dark/40 text-primary-dark px-6 py-2.5 rounded-full hover:bg-primary-dark hover:text-pure-white transition-all duration-300 font-normal text-sm">
+                  </a>
+                  <a href="#about" className="border border-primary-dark/40 text-primary-dark px-6 py-2.5 rounded-full hover:bg-primary-dark hover:text-pure-white transition-all duration-300 font-normal text-sm">
                     View Portfolio
-                  </button>
+                  </a>
                 </motion.div>
               </motion.div>
                 </div>
