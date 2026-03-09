@@ -19,7 +19,7 @@ export function Footer() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-pure-white/3 to-transparent rounded-full blur-3xl" />
       </div>
 
-      <div className="container-center relative z-10">
+      <div className="container-center px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Enhanced Header Section - Removed per requirements */}
 
         {/* Main Footer Content */}
@@ -225,18 +225,18 @@ export function Footer() {
           viewport={{ once: true }}
           className="border-t border-white/10 py-8"
         >
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col gap-6 lg:gap-0 lg:flex-row lg:justify-between lg:items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
               viewport={{ once: true }}
-              className="flex items-center text-tertiary-light/70 text-sm"
+              className="flex flex-wrap justify-center lg:justify-start items-center text-tertiary-light/70 text-sm gap-1"
             >
               <span>© {currentYear} Ravindu Nilash. Crafted with</span>
-              <Heart className="h-4 w-4 mx-2 text-red-500 animate-pulse" fill="currentColor" />
+              <Heart className="h-4 w-4 text-red-500 animate-pulse" fill="currentColor" />
               <span>and lots of</span>
-              <Coffee className="h-4 w-4 mx-2 text-amber-500" />
+              <Coffee className="h-4 w-4 text-amber-500" />
               <span>in Sri Lanka.</span>
             </motion.div>
 
@@ -253,7 +253,7 @@ export function Footer() {
                 boxShadow: "0 8px 25px rgba(31, 81, 255, 0.25)"
               }}
               whileTap={{ scale: 0.95 }}
-              className="group relative w-12 h-12 bg-secondary-gray hover:bg-tertiary-light/20 rounded-xl flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="group relative w-12 h-12 bg-secondary-gray hover:bg-tertiary-light/20 rounded-xl flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl mx-auto lg:mx-0"
               aria-label="Back to top"
             >
               <ArrowUp className="h-5 w-5 text-pure-white group-hover:-translate-y-1 transition-transform duration-300" />
